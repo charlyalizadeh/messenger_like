@@ -27,7 +27,9 @@ driver.get('https://www.facebook.com/messages/t/' + conversation_num)
 
 driver.execute_script("var scrollingInterval = setInterval(function (){document.querySelectorAll('.uiScrollableAreaWrap.scrollable')[2].scrollTop = 0;}, 500);")
 
-time.sleep(10)
+time.sleep(5*60)
+
 
 html = driver.page_source
 file = open('messenger.html','w')
+file.write(html)
